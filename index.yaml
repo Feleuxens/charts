@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  kronos:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-10-16T16:29:37.941811504Z"
+    description: A small Discord Bot
+    digest: 6dfedbf10dfcaffd0f7ecbdc7e44f12db464e73cf1f3a8b69dfb2351fcd8b4a2
+    name: kronos
+    type: application
+    urls:
+    - https://github.com/Feleuxens/charts/releases/download/kronos-0.1.0/kronos-0.1.0.tgz
+    version: 0.1.0
   mariadb:
   - annotations:
       category: Database
@@ -98,4 +109,24 @@ entries:
     urls:
     - https://helm.feleuxens.de/charts/memcached-6.5.4.tgz
     version: 6.5.4
-generated: "2023-06-30T11:57:59.690523568+02:00"
+  seafile:
+  - apiVersion: v2
+    appVersion: 10.0.1
+    created: "2023-10-16T16:29:38.247049351Z"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.5
+    - condition: memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.5.4
+    description: A Helm chart for Seafile deployment on Kubernetes
+    digest: 427f4580b86d6953fb87704440f30e231f220fcb5690e13cb13a4770fa3a21b1
+    name: seafile
+    type: application
+    urls:
+    - https://github.com/Feleuxens/charts/releases/download/seafile-0.1.0/seafile-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-10-16T16:29:38.247068851Z"
