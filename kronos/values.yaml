@@ -1,0 +1,45 @@
+# Default values for kronos.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+## @section Remove
+
+image:
+  ## @param image.repository Image repository
+  repository: feleuxens/kronos
+  ## @param image.pullPolicy Image pull policy
+  pullPolicy: IfNotPresent
+  ## @param image.tag Image tag. Overrides the image tag whose default is the chart appVersion
+  tag: ""
+
+## @param imagePullSecrets Image pull secrets needed when pulling from private repository
+imagePullSecrets: []
+## @param nameOverride Name override
+nameOverride: ""
+## @param fullnameOverride Fullname override
+fullnameOverride: ""
+
+## @param podAnnotations Pod annotations
+podAnnotations: {}
+
+## @param resources CPU and memory requests/limits
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+## @param nodeSelector Node labels for pod assignment
+nodeSelector: {}
+
+## @param tolerations Toleration labels for pod assignment
+tolerations: []
+
+## @param affinity Affinity settings for pod assignment
+affinity: {}
