@@ -3,6 +3,16 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: 10.8.13
+    created: "2023-12-09T11:42:01.890617097Z"
+    description: A Helm chart for Jellyfin
+    digest: a342e2ec29b5cb0be7deb878ae72eb7e52cca930e4b3c6d59c3026827996aa58
+    name: jellyfin
+    type: application
+    urls:
+    - https://github.com/Feleuxens/charts/releases/download/jellyfin-0.2.0/jellyfin-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 10.8.13
     created: "2023-12-08T22:50:36.52938811Z"
     description: A Helm chart for Jellyfin
     digest: 8286b1e532f31a423065fc9825912ea0dde83117fdf20f16cb91c5f5846b45d7
@@ -140,4 +150,4 @@ entries:
     urls:
     - https://github.com/Feleuxens/charts/releases/download/seafile-0.1.0/seafile-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-08T22:50:36.529417686Z"
+generated: "2023-12-09T11:42:01.890664025Z"
