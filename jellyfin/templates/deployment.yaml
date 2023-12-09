@@ -64,6 +64,25 @@ spec:
             {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      # create folders in media pv for the different media types
+      {{- if .Values.persistence.media.enabled }}
+      initContainers:
+        - name: media-fodlers-creation
+          image: busybox:1.35
+          command:
+            - /bin/mkdir
+          args:
+            - -p
+            - /media/movies
+            - /media/music
+            - /media/shows
+            - /media/books
+            - /media/music-videos
+            - /media/movies-and-shows
+          volumesMounts:
+            - mountPath: /media
+              name: media
+      {{- end }}
       volumes:
         {{- if .Values.persistence.config.enabled }}
         - name: config
