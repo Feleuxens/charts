@@ -86,7 +86,7 @@ spec:
       volumes:
         {{- if .Values.persistence.config.enabled }}
         - name: config
-          presistentVolumeClaim:
+          persistentVolumeClaim:
             claimName: {{ if .Values.persistence.config.existingClaim }}{{ .Values.persistence.config.existingClaim }}{{ else }}{{ template "jellyfin.fullname" . }}-config{{ end }}
         {{- end }}
         {{- if .Values.persistence.media.enabled }}

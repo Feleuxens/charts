@@ -61,7 +61,7 @@ spec:
             {{- end }}
       volumes:
         - name: data
-          presistentVolumeClaim:
+          persistentVolumeClaim:
             claimName: {{ if .Values.persistence.existingClaim }}{{ .Values.persistence.existingClaim }}{{ else }}{{ template "jellyseerr.fullname" . }}-data{{ end }}
         {{- if .Values.extraVolumes }}
         {{- toYaml .Values.extraVolumes | nindent 8 }}
