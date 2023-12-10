@@ -21,6 +21,17 @@ entries:
     urls:
     - https://github.com/Feleuxens/charts/releases/download/jellyfin-0.1.0/jellyfin-0.1.0.tgz
     version: 0.1.0
+  jellyseerr:
+  - apiVersion: v2
+    appVersion: 1.7.0
+    created: "2023-12-10T12:08:11.912403524Z"
+    description: A Helm chart for Kubernetes
+    digest: 585610f7e7cdb9236482d3ba940fbec3c3cf44292f360b5f60347a850ff9e154
+    name: jellyseerr
+    type: application
+    urls:
+    - https://github.com/Feleuxens/charts/releases/download/jellyseerr-0.1.0/jellyseerr-0.1.0.tgz
+    version: 0.1.0
   kronos:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -150,4 +161,4 @@ entries:
     urls:
     - https://github.com/Feleuxens/charts/releases/download/seafile-0.1.0/seafile-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-09T11:42:01.890664025Z"
+generated: "2023-12-10T12:08:11.912419003Z"
