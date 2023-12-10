@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "jellyseerr.fullname" . }}
+  labels:
+    {{- include "jellyseerr.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml .Values.service.annotations | nindent 4 }}
+spec:
+  type: {{ .Values.service.type | default "ClusterIP" }}
+  {{- if (and .Values.service.clusterIP (eq .Values.service.type "ClusterIP" )) }}
+  clusterIP: {{ .Values.service.clusterIP }}
+  {{- end }}
+  {{- if (and .Values.service.clusterIP (eq .Values.service.type "loadBalancerIP" )) }}
+  loadBalancerIP: {{ .Values.service.loadBalancerIP }}
+  {{- end }}
+  {{- if .Values.service.loadBalancerSourceRanges }}
+  loadBalancerSourceRanges:
+    {{- toYaml .Values.service.loadBalancerSourceRanges | nindent 4 }}
+  {{- end }}
+  {{- if and .Values.service.externalIPs (eq .Values.service.type "ExternalName") }}
+  externalIPs:
+    {{- toYaml .Values.service.externalIPs | nindent 4 }}
+  {{- end }}
+  {{- if and .Values.service.externalTrafficPolicy (eq .Values.service.type "LoadBalancer") }}
+  externalTrafficPolicy: {{ .Values.service.externalTrafficPolicy }}
+  {{- end }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "jellyseerr.selectorLabels" . | nindent 4 }}
