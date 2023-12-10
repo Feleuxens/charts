@@ -3,6 +3,16 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: 10.8.13
+    created: "2023-12-10T12:41:18.801999756Z"
+    description: A Helm chart for Jellyfin
+    digest: a6c0c3fd26411f6c8300304865ab4801c01ca8fc721cfa7f2be7b3a4a6369c3e
+    name: jellyfin
+    type: application
+    urls:
+    - https://github.com/Feleuxens/charts/releases/download/jellyfin-0.2.1/jellyfin-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 10.8.13
     created: "2023-12-09T11:42:01.890617097Z"
     description: A Helm chart for Jellyfin
     digest: a342e2ec29b5cb0be7deb878ae72eb7e52cca930e4b3c6d59c3026827996aa58
@@ -22,6 +32,16 @@ entries:
     - https://github.com/Feleuxens/charts/releases/download/jellyfin-0.1.0/jellyfin-0.1.0.tgz
     version: 0.1.0
   jellyseerr:
+  - apiVersion: v2
+    appVersion: 1.7.0
+    created: "2023-12-10T12:41:19.01250526Z"
+    description: A Helm chart for Kubernetes
+    digest: 13167d27d3e048260756592e578c65e6f2b526dbca7844eb950e6e6404a7d6dd
+    name: jellyseerr
+    type: application
+    urls:
+    - https://github.com/Feleuxens/charts/releases/download/jellyseerr-0.1.1/jellyseerr-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     appVersion: 1.7.0
     created: "2023-12-10T12:08:11.912403524Z"
@@ -161,4 +181,4 @@ entries:
     urls:
     - https://github.com/Feleuxens/charts/releases/download/seafile-0.1.0/seafile-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-10T12:08:11.912419003Z"
+generated: "2023-12-10T12:41:19.012524997Z"
