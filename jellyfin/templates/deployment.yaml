@@ -79,7 +79,7 @@ spec:
             - /media/books
             - /media/music-videos
             - /media/movies-and-shows
-          volumesMounts:
+          volumeMounts:
             - mountPath: /media
               name: media
       {{- end }}
