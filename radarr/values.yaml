@@ -44,9 +44,8 @@ affinity: {}
 ## @param podAnnotations
 podAnnotations: {}
 
-## @param podSecurityContext
+## @param podSecurityContext Additional pod security context. fsGroup is already set
 podSecurityContext: {}
-  # fsGroup: 2000
 
 ## @param securityContext
 securityContext: {}
